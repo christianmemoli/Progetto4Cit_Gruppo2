@@ -45,6 +45,21 @@ public class Test {
 			}
 			else if(flag==4)
 			{
+				System.out.println("Citta' di nascita errata. Riprovare");
+				flag=0;
+			}
+			else if(flag==5)
+			{
+				System.out.println("Cittadinanza errata. Riprovare");
+				flag=0;
+			}
+			else if(flag==6)
+			{
+				System.out.println("Numero di telefono errato. Riprovare");
+				flag=0;
+			}
+			else if(flag==7)
+			{
 				System.out.println("Dati esatti");
 				passeggeri.Registrazione(p);
 			}

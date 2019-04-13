@@ -79,7 +79,7 @@ public void setCodice(String codiceFiscale) {
 }
 
 public String getNumeroTelefonico() {
-	return cognome;
+	return numeroTelefonico;
 }
 public void setNumeroTelefonico(String numero) {
 	this.numeroTelefonico = numero;
@@ -102,48 +102,50 @@ public String toString() {
 }
 
 public int Controllo(Passeggero p) {
-	//controllo lunghezza
-	String str = p.getPassword();
-	int length = str.length();
+	//controllo lunghezza password
+	String s1 = p.getPassword();
+	int length = s1.length();
 	if(length<8)
 		return 1;
 	//controllo del nome senza numeri
-	String st = p.getNome();
-	for(int i=0; i<st.length(); i++)
+	String s2 = p.getNome();
+	for(int i=0; i<s2.length(); i++)
 	{
-		if(st.charAt(i)>=48 && st.charAt(i)<=57)
-			//numero nel nome
+		if(s2.charAt(i)>=48 && s2.charAt(i)<=57)
 			return 2;
 	}
-
 	//controllo del nome senza numeri
-	String sp = p.getCognome();
-	for(int i=0; i<sp.length(); i++)
+	String s3 = p.getCognome();
+	for(int i=0; i<s3.length(); i++)
 	{
-		if(sp.charAt(i)>=48 && sp.charAt(i)<=57)
-			//numero nel cognome
+		if(s3.charAt(i)>=48 && s3.charAt(i)<=57)
 			return 3;
 	}
-	/*//controllo del citta senza numeri
-		String sc = p.getCittaNascita();
-		for(int i=0; i<sc.length(); i++)
-		{
-			if(sc.charAt(i)>=48 && sc.charAt(i)<=57)
-				//numero nel nome
-				return 2;
-		}
-
-
-	/*	//controllo della cittadinanza senza numeri
-		String st = p.getCittaNascita();
-		for(int i=0; i<st.length(); i++)
-		{
-			if(st.charAt(i)>=48 && st.charAt(i)<=57)
-				//numero nel nome
-				return 2;
-		}*/
-
-
-	return 4; //dati corretti
+	//controllo del citta senza numeri
+	String s4 = p.getCittaNascita();
+	for(int i=0; i<s4.length(); i++)
+	{
+		if(s4.charAt(i)>=48 && s4.charAt(i)<=57)
+			return 4;
+	}
+	//controllo della cittadinanza senza numeri
+	String s5 = p.getNazioneNascita();
+	for(int i=0; i<s5.length(); i++)
+	{
+		if(s5.charAt(i)>=48 && s5.charAt(i)<=57)
+			return 5;
+	}
+	//controllo lunghezza telefono
+	String s6 = p.getNumeroTelefonico();
+	int length2 = s6.length();
+	if(length2!=10)
+		return 6;
+	//controllo del numero senza lettere
+	/*for(int i=0; i<s6.length(); i++)
+	{
+		if(s6.charAt(i)<=48 && s6.charAt(i)>=57)
+			return 6;
+	}*/
+	return 7; //dati corretti
 }
 }
