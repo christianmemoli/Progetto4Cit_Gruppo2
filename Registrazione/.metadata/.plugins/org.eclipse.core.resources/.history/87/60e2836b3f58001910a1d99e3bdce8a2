@@ -1,0 +1,20 @@
+
+public class Registrazione {
+	
+	public boolean Controllo(Passeggero p) {
+		
+		//controllo che non ci isano lettere nel nome
+		//password con almeno 8 caratteri
+		
+		return true;
+		
+	}
+	
+	public Registrazione(Passeggero p) {
+		Passeggeri pass = new Passeggeri();
+		pass.addPasseggero(p);
+		//salvataggio su file
+	}
+	
+
+}

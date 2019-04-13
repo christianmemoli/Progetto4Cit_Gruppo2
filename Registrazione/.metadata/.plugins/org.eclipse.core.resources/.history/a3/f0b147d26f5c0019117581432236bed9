@@ -1,0 +1,28 @@
+
+public class Test {
+
+	public static void main(String[] args) throws Eccezioni {
+		// TODO Auto-generated method stub
+		Passeggero p=new Passeggero("Camilla","Rossi","Italia","Parma","3466144465");
+		String code=p.generaCodice();
+		System.out.println(code);
+		Passeggero p1=new Passeggero("Luca","Stefani","Isoletta","Palma","34877145465");
+		String code1=p1.generaCodice();
+		System.out.println(code1);
+		Passeggero p2=new Passeggero("Mario","Verdi","Italia","Parma","3466144425");
+		String code2=p2.generaCodice();
+		System.out.println(code2);
+		
+		//controlli e richieste varie...
+		
+		Passeggeri passeggeri=new Passeggeri();
+		passeggeri.Registrazione(p);
+		passeggeri.Registrazione(p1);
+		passeggeri.Registrazione(p2);
+		
+		String elenco=passeggeri.elenco();
+		System.out.println(elenco);
+
+	}
+
+}

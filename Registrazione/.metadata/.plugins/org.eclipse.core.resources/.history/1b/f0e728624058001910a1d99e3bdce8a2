@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Passeggeri{
+
+private ArrayList <Passeggero> passeggeri;
+
+public Passeggeri() {
+	passeggeri=new ArrayList<>();
+
+}
+public void addPasseggero(Passeggero p) {
+	passeggeri.add(p.clone());
+}
+
+public void deletePasseggero(String code) {
+	Iterator<Passeggero>i;
+	for(i=passeggeri.iterator(); i.hasNext();) {
+		Passeggero passeggero = i.next();
+		if(passeggero.getCodice().equals(code)) {
+			i.remove();
+		}
+	}
+	//eccezione pass sconosciuto
+}
+
+}

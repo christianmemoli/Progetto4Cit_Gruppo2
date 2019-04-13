@@ -1,0 +1,65 @@
+import java.util.Random;
+
+public class Passeggero implements Cloneable{
+	
+private String cognome;
+private String nome;
+private String nazioneNascita;
+private String cittaNascista;
+private String codice;
+
+public Passeggero(String nome, String cognome, String nazioneNascita, String cittaNascista) {
+	
+	this.cognome = cognome;
+	this.nome = nome;
+	this.nazioneNascita = nazioneNascita;
+	this.cittaNascista = cittaNascista;
+	this.codice=generaCodice();
+}
+
+public Passeggero clone() {
+	Passeggero p=new Passeggero(this.nome, this.cognome, this.nazioneNascita, this.cittaNascista);
+	return p;
+}
+
+public String generaCodice() {
+	//long seed = 14567809;
+	Random rnd = new Random(seed);
+	String code = this.nome+this.cognome+rnd;
+	return code;
+}
+
+public String getCognome() {
+	return cognome;
+}
+public void setCognome(String cognome) {
+	this.cognome = cognome;
+}
+public String getNome() {
+	return nome;
+}
+public void setNome(String nome) {
+	this.nome = nome;
+}
+public String getNazioneNascita() {
+	return nazioneNascita;
+}
+public void setNazioneNascita(String nazioneNascita) {
+	this.nazioneNascita = nazioneNascita;
+}
+public String getCittaNascista() {
+	return cittaNascista;
+}
+public void setCittaNascista(String cittaNascista) {
+	this.cittaNascista = cittaNascista;
+}
+
+public String getCodice() {
+	return codice;
+}
+public void setCodice(String codiceFiscale) {
+	this.codice = codiceFiscale;
+}
+
+
+}

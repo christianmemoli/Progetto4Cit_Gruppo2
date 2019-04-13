@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) throws Eccezioni {
+		// TODO Auto-generated method stub
+		
+		Passeggero p = new Passeggero();
+		Passeggeri passeggeri=new Passeggeri();
+		Scanner sc = new Scanner(System.in);
+		int flag=0; 
+		while(flag==0)
+		{
+			System.out.println("Digitare il nome: ");
+			String nome = sc.nextLine();
+			System.out.println("Digitare il cognome: ");
+			String cognome = sc.nextLine();
+			System.out.println("Digitare la cittadinanza: ");
+			String cittadinanza = sc.nextLine();
+			System.out.println("Digitare la citta' di nascita: ");
+			String citta = sc.nextLine();
+			System.out.println("Digitare il numero di telefono: ");
+			String telefono = sc.nextLine();
+			System.out.println("Digitare l'username: ");
+			String username = sc.nextLine();
+			System.out.println("Digitare la password: ");
+			String password = sc.nextLine();
+			
+			p = new Passeggero(nome,cognome,cittadinanza,citta,telefono,username,password);
+			flag = p.Controllo(p);
+			if(flag==1)
+			{
+				System.out.println("Password errata. Riprovare");
+				flag=0;
+			}
+			else if(flag==2)
+			{
+				System.out.println("Nome errato. Riprovare");
+				flag=0;
+			}
+			else if(flag==3)
+			{
+				System.out.println("Cognome errato. Riprovare");
+				flag=0;
+			}
+			else if(flag==4)
+			{
+				System.out.println("Dati esatti");
+				passeggeri.Registrazione(p);
+			}
+		
+		passeggeri.Registrazione(p);
+
+	/*	String elenco=passeggeri.elenco();
+		System.out.println(elenco);
+*/
+	}
+
+}

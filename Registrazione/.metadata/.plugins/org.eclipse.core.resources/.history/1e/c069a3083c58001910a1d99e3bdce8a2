@@ -1,0 +1,16 @@
+import java.util.ArrayList;
+
+public class Passeggeri{
+
+private ArrayList <Passeggero> passeggeri;
+
+public Passeggeri() {
+	passeggeri=new ArrayList<>();
+
+}
+public void addPasseggero(Passeggero p) {
+	passeggeri.add(p.clone());
+}
+public void deleePasseggero(String code)
+
+}

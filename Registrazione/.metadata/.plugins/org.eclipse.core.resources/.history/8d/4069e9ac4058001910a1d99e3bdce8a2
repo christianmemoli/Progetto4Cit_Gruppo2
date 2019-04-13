@@ -1,0 +1,26 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Passeggero p=new Passeggero("Camilla","Rossi","Italia","Parma");
+		String code=p.generaCodice();
+		System.out.println(code);
+		Passeggero p1=new Passeggero("Luca","Stefani","Isoletta","Palma");
+		String code1=p1.generaCodice();
+		System.out.println(code1);
+		Passeggero p2=new Passeggero("Mario","Verdi","Italia","Parma");
+		String code2=p2.generaCodice();
+		System.out.println(code2);
+		
+		//controlli e richieste varie...
+		
+		Passeggeri passeggeri=new Passeggeri();
+		passeggeri.addPasseggero(p);
+		passeggeri.addPasseggero(p1);
+		passeggeri.addPasseggero(p2);
+
+		
+	}
+
+}
