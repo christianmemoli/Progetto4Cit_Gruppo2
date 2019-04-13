@@ -62,12 +62,14 @@ public class Test {
 			{
 				System.out.println("Dati esatti");
 				passeggeri.Registrazione(p);
-				System.out.println("Dati:");
-				String elenco = passeggeri.elenco();
-				System.out.println(elenco);
 			}
 		
 	//	passeggeri.Registrazione(p);
-			}
+
+	/*	String elenco=passeggeri.elenco();
+		System.out.println(elenco);
+*/
+	}
+
 	}
 }
