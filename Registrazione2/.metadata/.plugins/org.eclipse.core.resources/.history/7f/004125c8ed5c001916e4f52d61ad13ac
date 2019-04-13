@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) throws Eccezioni {
+		// TODO Auto-generated method stub
+		
+		Passeggero p = new Passeggero();
+		Passeggeri passeggeri=new Passeggeri();
+		Scanner sc = new Scanner(System.in);
+		boolean flag=false;
+		while(flag==false)
+		{
+			System.out.println("Digitare il nome: ");
+			String nome = sc.nextLine();
+			System.out.println("Digitare il cognome: ");
+			String cognome = sc.nextLine();
+			System.out.println("Digitare la cittadinanza: ");
+			String cittadinanza = sc.nextLine();
+			System.out.println("Digitare la citta' di nascita: ");
+			String citta = sc.nextLine();
+			System.out.println("Digitare il numero di telefono: ");
+			String telefono = sc.nextLine();
+			System.out.println("Digitare l'username: ");
+			String username = sc.nextLine();
+			System.out.println("Digitare la password: ");
+			String password = sc.nextLine();
+			
+			p = new Passeggero(nome,cognome,cittadinanza,citta,telefono,username,password);
+			flag = p.Controllo(p);
+			if(flag==false)
+				System.out.println("Dati errati. Riprovare");
+			else
+				System.out.println("Dati corretti");
+				
+		}
+		
+	//	passeggeri.Registrazione(p);
+
+	/*	String elenco=passeggeri.elenco();
+		System.out.println(elenco);
+*/
+	}
+
+}
