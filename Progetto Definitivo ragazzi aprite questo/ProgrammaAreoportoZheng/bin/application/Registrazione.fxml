@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="483.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="59.0" layoutY="14.0" text="REGISTRAZIONE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="70.0" layoutY="53.0" text="NOME" fx:id="nome"/>
+      <TextField layoutX="70.0" layoutY="94.0" text="COGNOME" fx:id="cognome"/>
+      <TextField layoutX="70.0" layoutY="136.0" text="NAZIONE DI NASCITA" fx:id="nazione"/>
+      <TextField layoutX="71.0" layoutY="180.0" text="CITTA DI NASCITA" fx:id="citta"/>
+      <TextField layoutX="57.0" layoutY="307.0" prefHeight="27.0" prefWidth="44.0" text="gg" fx:id="gg"/>
+      <TextField layoutX="113.0" layoutY="307.0" prefHeight="27.0" prefWidth="44.0" text="mm" fx:id="mm"/>
+      <TextField layoutX="173.0" layoutY="307.0" prefHeight="27.0" prefWidth="77.0" text="yyyy" fx:id="yyyy"/>
+      <TextField layoutX="70.0" layoutY="225.0" text="EMAIL" fx:id="email"/>
+      <TextField layoutX="70.0" layoutY="268.0" text="PASSWORD" fx:id="password"/>
+      <Button layoutX="41.0" layoutY="353.0" mnemonicParsing="false" text="REGISTRATI" fx:id="registrati"/>
+      <Button layoutX="191.0" layoutY="353.0" mnemonicParsing="false" text="ANNULLA" fx:id="annulla"/>
+      <TextArea layoutX="250.0" layoutY="50.0" prefHeight="229.0" prefWidth="200.0" />
+   </children>
+</Pane>
