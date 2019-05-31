@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="483.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="505.0" fitWidth="493.0" layoutX="-6.0" layoutY="-17.0" opacity="0.75" pickOnBounds="true">
+         <image>
+            <Image url="@airbus-a350-xwb-1-353409.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="155.0" layoutY="14.0" text="REGISTRAZIONE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nome" layoutX="167.0" layoutY="57.0" />
+      <TextField fx:id="cognome" layoutX="167.0" layoutY="94.0" />
+      <TextField fx:id="nazione" layoutX="167.0" layoutY="132.0" />
+      <TextField fx:id="citta" layoutX="167.0" layoutY="170.0" />
+      <TextField fx:id="email" layoutX="167.0" layoutY="209.0" />
+      <TextField fx:id="password" layoutX="167.0" layoutY="288.0" />
+      <Button fx:id="registrati" layoutX="85.0" layoutY="340.0" mnemonicParsing="false" text="REGISTRATI" />
+      <Button fx:id="annulla" layoutX="89.0" layoutY="380.0" mnemonicParsing="false" text="ANNULLA" />
+      <TextArea layoutX="241.0" layoutY="353.0" prefHeight="35.0" prefWidth="200.0" />
+      <Text layoutX="47.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="45.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="45.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cognome:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="47.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazionalità:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="45.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Mail:" wrappingWidth="68.203125">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="45.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Città di nascita:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="46.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="password1" layoutX="167.0" layoutY="251.0" />
+   </children>
+</Pane>

@@ -1,0 +1,102 @@
+package application;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import javafx.beans.property.StringProperty;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+
+public class ControllerLogin 
+{
+	@FXML Button login,registrazione;
+	@FXML TextField username,password;
+		
+	private ArrayList <Passeggero> passeggeri;
+
+	
+	private StringProperty Username,Password;
+	
+	public void initialize()
+	{
+		username.textProperty().bindBidirectional(Username);
+		password.textProperty().bindBidirectional(Password);
+		
+		login.addEventHandler(ActionEvent.ACTION,ActionEvent -> {
+			try {
+				LOGIN();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		});
+		
+		registrazione.addEventHandler(ActionEvent.ACTION,ActionEvent ->{
+			REGISTRAZIONE();
+		}); 
+
+	}
+	public void salvaPasseggeri() throws java.io.IOException{
+		ObjectOutputStream stream = new ObjectOutputStream(new FileOutputStream("daticlienti.bin"));
+		stream.writeObject(this.passeggeri);
+		stream.close();
+	}
+	public void caricaPasseggeri() throws java.io.IOException{
+		ObjectInputStream stream = new ObjectInputStream(new FileInputStream("daticlienti.bin"));
+		try{
+			this.passeggeri=(ArrayList <Passeggero>)stream.readObject();
+		}
+		catch(ClassNotFoundException e){
+		stream.close();
+		}
+	}
+
+	
+	private String getUsername()
+	{
+		return Username.get();
+	}
+	private String getPassword()
+	{
+		return Password.get();
+	}
+	
+	public void LOGIN() throws IOException 
+	{
+		//boolean flag = false;
+		caricaPasseggeri();
+		Iterator<Passeggero>i;
+		for(i=passeggeri.iterator(); i.hasNext();) {
+			Passeggero passeggero = i.next();
+			if(passeggero.getUsername().equals(username) && passeggero.getPassword().equals(password)) {
+				//esatto
+			//	flag = true;
+			}
+			else{
+				//falso
+			}
+		}
+	}
+	
+	public void REGISTRAZIONE()
+	{
+		/*addPasseggero(p);
+		//salvataggio su file
+		try {
+			salvaPasseggeri();
+			} 
+		catch (IOException e) {
+		//	e.printStackTrace();
+			
+			throw new Eccezioni("Salvataggio non effettuato");
+			}*/
+	}
+}
